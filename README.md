@@ -23,7 +23,8 @@ OR
 import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
 
 const CalledInThis = () => {
-    autoLog('HI',{});
+    autoLog('HI');
+    autoLogE('HI');
     autoLogI('HI');
     autoLogW('HI');
 }
@@ -33,6 +34,7 @@ CalledInThis();
 OUTPUT(Color Coded):
 
 `
+CalledInThis | Error: HI
 CalledInThis | Error: HI
 CalledInThis | Info: HI
 CalledInThis | Warning: HI
