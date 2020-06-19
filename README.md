@@ -28,10 +28,14 @@ import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
 Usage
 ```javascript
 const CalledInThis = () => {
-    autoLog('HI');
-    autoLogE('HI');
-    autoLogI('HI');
-    autoLogW('HI');
+    autoLogI('Hi');
+    autoLogW('Hi');
+    autoLog('Hi');
+    autoLogE('Hi');
+    autoLogI();
+    autoLogW();
+    autoLog();
+    autoLogE();
 }
 CalledInThis();
 ```
@@ -39,8 +43,12 @@ CalledInThis();
 OUTPUT(Color Coded):
 
 ```
-CalledInThis | Error: HI
-CalledInThis | Error: HI
-CalledInThis | Info: HI
-CalledInThis | Warning: HI
+CalledInThis | Info: Hi
+CalledInThis | Warning: Hi
+CalledInThis | Error: Hi
+CalledInThis | Error: Hi
+CalledInThis Called
+CalledInThis Called
+CalledInThis Called
+CalledInThis Called
 ```
