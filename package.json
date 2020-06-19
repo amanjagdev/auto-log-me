@@ -1,0 +1,12 @@
+{
+  "name": "auto-log",
+  "version": "1.0.0",
+  "description": "A auto logger for your programs so that you can easily debug them",
+  "main": "index.js",
+  "repository": "https://github.com/amanjagdev/auto-log.git",
+  "author": "Aman Jagdev",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/main.js"
+  }
+}
