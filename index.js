@@ -10,8 +10,11 @@ const autoLogE = (message) => {
     let arr = caller.split(" ");
 
     const nameOfFunction = arr[0];
-
-    console.log(`${nameOfFunction}`.blue + ` |`.green + ` Error: ${message}`.red.bold);
+    if (message != undefined) {
+        console.log(`${nameOfFunction}`.cyan + ` |`.green + ` Error: ${message}`.red.bold);
+    } else {
+        console.log(`${nameOfFunction} Called`.cyan);
+    }
 }
 
 //Info Log
@@ -24,13 +27,16 @@ const autoLogI = (message) => {
     let arr = caller.split(" ");
 
     const nameOfFunction = arr[0];
-
-    console.log(`${nameOfFunction}`.blue + ` |`.green + ` Info: ${message}`.blue.bold);
+    if (message != undefined) {
+        console.log(`${nameOfFunction}`.cyan + ` |`.green + ` Info: ${message}`.blue.bold);
+    } else {
+        console.log(`${nameOfFunction} Called`.cyan);
+    }
 }
 
 
 //Warning Log
-const autoLogW = (message ) => {
+const autoLogW = (message) => {
 
     //Creating Error to get name of function
     let stack = new Error().stack
@@ -39,8 +45,11 @@ const autoLogW = (message ) => {
     let arr = caller.split(" ");
 
     const nameOfFunction = arr[0];
-
-    console.log(`${nameOfFunction}`.blue + ` |`.green + ` Warning: ${message}`.yellow.bold);
+    if (message != undefined) {
+        console.log(`${nameOfFunction}`.cyan + ` |`.green + ` Warning: ${message}`.yellow.bold);
+    } else {
+        console.log(`${nameOfFunction} Called`.cyan);
+    }
 }
 
 module.exports.autoLog = autoLogE;

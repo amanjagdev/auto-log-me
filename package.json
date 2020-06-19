@@ -1,5 +1,5 @@
 {
-  "name": "auto-log",
+  "name": "auto-log-me",
   "version": "1.0.0",
   "description": "A auto logger for your programs so that you can easily debug them",
   "main": "index.js",

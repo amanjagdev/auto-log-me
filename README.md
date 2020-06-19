@@ -1,4 +1,4 @@
-# auto-log
+# auto-log-me
 
 A Logger to Debug your JS Projects.
 
@@ -7,21 +7,26 @@ It logs the name of the function you called it in along with the message that yo
 
 ## Installation
 
-`yarn add auto-log`
+`yarn add auto-log-me`
 
 OR
 
-`npm install auto-log`
+`npm install auto-log-me`
 
 ## Usage
 
-`
-const { autoLog, autoLogE, autoLogI, autoLogW } = require('auto-log');
-
+Import 
+```javascript
+const { autoLog, autoLogE, autoLogI, autoLogW } = require('auto-log');`
+```
 OR
 
+```javascript
 import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
+```
 
+Usage
+```javascript
 const CalledInThis = () => {
     autoLog('HI');
     autoLogE('HI');
@@ -29,13 +34,13 @@ const CalledInThis = () => {
     autoLogW('HI');
 }
 CalledInThis();
-`
+```
 
 OUTPUT(Color Coded):
 
-`
+```
 CalledInThis | Error: HI
 CalledInThis | Error: HI
 CalledInThis | Info: HI
 CalledInThis | Warning: HI
-`
+```
