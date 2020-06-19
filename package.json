@@ -7,6 +7,10 @@
   "author": "Aman Jagdev",
   "license": "MIT",
   "scripts": {
-    "test": "node test/main.js"
+    "test": "node test/main.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
   }
 }
