@@ -51,4 +51,4 @@ CalledInThis();
 
 OUTPUT(Color Coded):
 
-![alt text](https://github.com/amanjagdev/auto-log-me//image.jpg?raw=true)
+![Output Photo](https://github.com/amanjagdev/auto-log-me/blob/master/assets/output.jpg?raw=true)
