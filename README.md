@@ -28,6 +28,11 @@ import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
 Usage
 ```javascript
 const CalledInThis = () => {
+    const foo = "Value of foo";
+    const foosome = {
+        value: "This is a object"
+    };
+
     autoLogI('Hi');
     autoLogW('Hi');
     autoLog('Hi');
@@ -36,19 +41,14 @@ const CalledInThis = () => {
     autoLogW();
     autoLog();
     autoLogE();
+    autoLogI('', { foo, foosome });
+    autoLogW('', { foo, foosome });
+    autoLogE('You can even write errors', { foo, foosome });
+    autoLog('', { foo, foosome });
 }
 CalledInThis();
 ```
 
 OUTPUT(Color Coded):
 
-```
-CalledInThis | Info: Hi
-CalledInThis | Warning: Hi
-CalledInThis | Error: Hi
-CalledInThis | Error: Hi
-CalledInThis Called
-CalledInThis Called
-CalledInThis Called
-CalledInThis Called
-```
+![alt text](https://github.com/amanjagdev/auto-log-me//image.jpg?raw=true)

@@ -1,7 +1,7 @@
 const colors = require('colors');
 
 //Error Log
-const autoLogE = (message) => {
+const autoLogE = (message, vars) => {
 
     //Creating Error to get name of function
     let stack = new Error().stack
@@ -10,15 +10,23 @@ const autoLogE = (message) => {
     let arr = caller.split(" ");
 
     const nameOfFunction = arr[0];
-    if (message != undefined) {
+    if (message !== (undefined || '')) {
         console.log(`${nameOfFunction}`.cyan + ` |`.green + ` Error: ${message}`.red.bold);
     } else {
         console.log(`${nameOfFunction} Called`.cyan);
     }
+
+    //Printing varibales
+    if (vars !== undefined) {
+        console.log("Variables Used : ".green.bold);
+        for (let varname in vars) {
+            console.log(varname.yellow.bold + ": " + JSON.stringify(vars[varname]).green);
+        }
+    }
 }
 
 //Info Log
-const autoLogI = (message) => {
+const autoLogI = (message, vars) => {
 
     //Creating Error to get name of function
     let stack = new Error().stack
@@ -27,16 +35,24 @@ const autoLogI = (message) => {
     let arr = caller.split(" ");
 
     const nameOfFunction = arr[0];
-    if (message != undefined) {
+    if (message !== (undefined || '')) {
         console.log(`${nameOfFunction}`.cyan + ` |`.green + ` Info: ${message}`.blue.bold);
     } else {
         console.log(`${nameOfFunction} Called`.cyan);
+    }
+
+    //Printing varibales
+    if (vars !== undefined) {
+        console.log("Variables Used : ".green.bold);
+        for (let varname in vars) {
+            console.log(varname.yellow.bold + ": " + JSON.stringify(vars[varname]).green);
+        }
     }
 }
 
 
 //Warning Log
-const autoLogW = (message) => {
+const autoLogW = (message, vars) => {
 
     //Creating Error to get name of function
     let stack = new Error().stack
@@ -45,10 +61,18 @@ const autoLogW = (message) => {
     let arr = caller.split(" ");
 
     const nameOfFunction = arr[0];
-    if (message != undefined) {
+    if (message !== (undefined || '')) {
         console.log(`${nameOfFunction}`.cyan + ` |`.green + ` Warning: ${message}`.yellow.bold);
     } else {
         console.log(`${nameOfFunction} Called`.cyan);
+    }
+
+    //Printing varibales
+    if (vars !== undefined) {
+        console.log("Variables Used : ".green.bold);
+        for (let varname in vars) {
+            console.log(varname.yellow.bold + ": " + JSON.stringify(vars[varname]).green);
+        }
     }
 }
 
