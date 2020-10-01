@@ -27,10 +27,12 @@ import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
 
 Functions
 
-```autoLog() --> for basic messages
+```javascript
+autoLog() --> for basic messages
 autoLogI() --> for info messages
 autoLogW() --> for warning messages
-autoLogE() --> for error messages```
+autoLogE() --> for error messages
+```
 
 Usage
 ```javascript
