@@ -17,12 +17,21 @@ OR
 
 Import 
 ```javascript
-const { autoLog, autoLogE, autoLogI, autoLogW } = require('auto-log');`
+const { autoLog, autoLogE, autoLogI, autoLogW } = require('auto-log');
 ```
 OR
 
 ```javascript
 import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
+```
+
+Functions
+
+```javascript
+autoLog() --> for basic messages
+autoLogI() --> for info messages
+autoLogW() --> for warning messages
+autoLogE() --> for error messages
 ```
 
 Usage
