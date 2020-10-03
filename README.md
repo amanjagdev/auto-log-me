@@ -17,12 +17,12 @@ OR
 
 Import 
 ```javascript
-const { autoLog, autoLogE, autoLogI, autoLogW } = require('auto-log');
+const { autoLog, autoLogE, autoLogI, autoLogW } = require('auto-log-me');
 ```
 OR
 
 ```javascript
-import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log';
+import { autoLog, autoLogE, autoLogI, autoLogW } from 'auto-log-me';
 ```
 
 Functions
