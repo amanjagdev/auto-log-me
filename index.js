@@ -3,6 +3,9 @@ const colors = require('colors');
 //Error Log
 const autoLogE = (message, vars) => {
 
+    // If the process is running in 'production', stop logging.
+    if (process.env.NODE_ENV === "production") return;
+
     //Creating Error to get name of function
     let stack = new Error().stack
     let caller = stack.split('\n')[2].trim();
@@ -27,6 +30,9 @@ const autoLogE = (message, vars) => {
 
 //Info Log
 const autoLogI = (message, vars) => {
+
+    // If the process is running in 'production', stop logging.
+    if (process.env.NODE_ENV === "production") return;
 
     //Creating Error to get name of function
     let stack = new Error().stack
@@ -53,6 +59,9 @@ const autoLogI = (message, vars) => {
 
 //Warning Log
 const autoLogW = (message, vars) => {
+
+    // If the process is running in 'production', stop logging.
+    if (process.env.NODE_ENV === "production") return;
 
     //Creating Error to get name of function
     let stack = new Error().stack
